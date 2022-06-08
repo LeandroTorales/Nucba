@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>Formulario de registro</h1>
+
+        <form class="nombre">
+          <label
+            >Nombre:
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              size="30"
+              placeholder="Ingrese su nombre:"
+          /></label>
+        </form>
+
+        <form class="apellido">
+          <label
+            >Apellidos:
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              size="30"
+              placeholder="Ingrese su apellido:"
+          /></label>
+        </form>
+
+        <form class="genero">
+          <label>Sexo:</label>
+          <input type="radio" id="hombre" name="genero" value="hombre" />
+          <label>hombre</label>
+          <input type="radio" id="mujer" name="genero" value="mujer" />
+          <label>mujer</label>
+        </form>
+
+        <form class="email">
+          <label>Correo:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            size="30"
+            placeholder="Ingrese su correo:"
+          />
+        </form>
+
+        <form class="informacion-ofertas">
+          <input type="checkbox" name="ofertas" id="ofertas" />
+          <label>Deseo recibir información sobre novedades y ofertas</label>
+        </form>
+
+        <form class="condiciones-generales">
+          <input type="checkbox" name="condiciones" id="condiciones" />
+          <label
+            >Declaro haber leido y aceptar las condiciones generales del
+            programa y la normativa sobre protección de datos</label
+          >
+        </form>
+
+        <form class="enviar">
+          <input type="button" id="enviar" value="Enviar" />
+        </form>
+      </section>
+    </article>
+  </body>
+</html>
