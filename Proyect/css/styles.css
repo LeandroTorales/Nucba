@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  background-image: url(/img/imgBackround.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: auto;
+}
+body {
+  font-family: "Playfair Display", serif;
+}
+#imgBackround {
+  width: 100%;
+  height: 100%;
+  background: no-repeat;
+}
+nav {
+  background-color: rgb(192, 149, 21, 0.75);
+  width: 100%;
+  height: 91px;
+}
+.title {
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em;
+}
+.linksYLogo {
+  display: flex;
+  justify-content: flex-start;
+}
+#linkLogo {
+  height: 10%;
+  width: 7%;
+}
+#imgLogoNav {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.divLinks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.links {
+  color: rgb(255, 255, 255);
+  margin: 0 10px;
+  background-color: rgba(103, 5, 5, 0.221);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 20px;
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+.presentacion {
+  height: 255px;
+  background-color: rgba(191, 191, 191, 0.75);
+  margin: 10% 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em;
+}
+.titleHero {
+  font: bold;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 900;
+  text-decoration: underline rgb(0, 0, 0);
+  padding: 10px 0px 21px 0px;
+}
+.heroTextYimg {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 130px;
+}
+.textHero {
+  font-size: 28px;
+  text-align: justify;
+  margin-left: 15px;
+  margin-right: 66px;
+}
+.PraiseTheSunLogoImg {
+  height: 185px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 20px;
+}
+#hogueraImgLogoId {
+  justify-content: center center;
+  height: 185px;
+  cursor: pointer;
+}
+.aboutUs {
+  background-color: rgba(191, 191, 191, 0.75);
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em;
+}
+.titleAboutUs {
+  font-size: 30px;
+  text-align: left;
+  font-weight: 900;
+  text-decoration: underline rgb(0, 0, 0);
+  padding: 0px 0px 10px 20px;
+}
+.textAboutUs {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  text-align: justify;
+  padding: 0px 15px 15px 15px;
+}
+.footerRigths {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 41, 0);
+  color: white;
+  font-size: 15px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
