@@ -40,7 +40,7 @@ nav {
   height: 10%;
   width: 7%;
 }
-#imgLogo {
+#imgLogoNav {
   height: 100%;
   width: 100%;
   cursor: pointer;
@@ -63,31 +63,69 @@ nav {
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 .presentacion {
-  height: 150px;
+  height: 255px;
   background-color: rgba(191, 191, 191, 0.75);
   margin: 10% 0;
   font-size: 20px;
   font-weight: 700;
   text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em;
 }
-h2 {
+.titleHero {
   font: bold;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 900;
+  text-decoration: underline rgb(0, 0, 0);
+  padding: 10px 0px 21px 0px;
 }
-.heroText-img {
+.heroTextYimg {
   display: flex;
   align-items: center;
   flex-direction: row;
+  height: 130px;
 }
 .textHero {
-  font-size: 25px;
+  font-size: 28px;
   text-align: justify;
-  text-indent: 30px;
+  margin-left: 15px;
+  margin-right: 66px;
 }
-.onikiriDiv {
-  height: 150px;
+.PraiseTheSunLogoImg {
+  height: 185px;
   display: flex;
   justify-content: flex-end;
+  margin: 10px 20px;
 }
-#onikiriId {
-  height: 160px;
+#hogueraImgLogoId {
+  justify-content: center center;
+  height: 185px;
+  cursor: pointer;
+}
+.aboutUs {
+  background-color: rgba(191, 191, 191, 0.75);
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em;
+}
+.titleAboutUs {
+  font-size: 30px;
+  text-align: left;
+  font-weight: 900;
+  text-decoration: underline rgb(0, 0, 0);
+  padding: 0px 0px 10px 20px;
+}
+.textAboutUs {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  text-align: justify;
+  padding: 0px 15px 15px 15px;
+}
+.footerRigths {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 41, 0);
+  color: white;
+  font-size: 15px;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
