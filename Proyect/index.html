@@ -10,28 +10,49 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="linksYLogo">
-          <a href="https://www.instagram.com/leandro.fd_/" id="linkLogo">
-            <img src="./img/hogueraImgLogo.png" alt="imgLogoNav" id="imgLogoNav" />
-          </a>
-          <div class="title"><h1>Bienvenidos</h1></div>
-          <div class="divLinks">
-            <a href="https://www.google.com/" class="links"><p>Inicio</p></a>
-            <a href="https://www.google.com/" class="links"><p>Zonas</p></a>
-            <a href="https://www.google.com/" class="links"><p>Armas</p></a>
-            <a href="https://www.google.com/" class="links"><p>Builds</p></a>
-            <a href="https://www.google.com/" class="links"><p>Jefes</p></a>
-            <a href="https://www.google.com/" class="links"><p>Finales</p></a>
-          </div>
+      <nav class="linksYLogo">
+        <a href="https://www.instagram.com/leandro.fd_/" id="linkLogo">
+          <img src="./img/hogueraImgLogo.png" alt="imgLogoNav" id="imgLogoNav" />
+        </a>
+        <div class="title"><h1>Bienvenidos</h1></div>
+
+        <div class="divLinks">
+          <!--Aca poodria haber echo una lista-->
+          <a href="https://www.google.com/" class="links"><p>Inicio</p></a>
+          <a href="https://www.google.com/" class="links"><p>Zonas</p></a>
+          <a href="https://www.google.com/" class="links"><p>Armas</p></a>
+          <a href="https://www.google.com/" class="links"><p>Builds</p></a>
+          <a href="https://www.google.com/" class="links"><p>Jefes</p></a>
+          <a href="https://www.google.com/" class="links"><p>Finales</p></a>
         </div>
+
+
+
+        <div class="div-svgBars-input-checkBox">
+          <!--Este div no va, ya con el label referenciando al input ya esta, con la class del label ya se referenciaria al div-->
+          <input type="checkbox" name="checkbox" id="check" />
+          <label for="check" class="checkbutton"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svgBarsNavBar">
+              <path
+                d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+              />
+            </svg>
+          </label>
+        </div>
+
+
+
       </nav>
     </header>
     <main>
       <article class="hero">
         <section class="presentacion">
           <h2 class="titleHero">El comienzo de nuestro viaje</h2>
+
+
+
           <div class="heroTextYimg">
+            <!--Podria haber echo una lista anidada o lista comun y agregarle list-style:none por css3-->
             <div class="textHero">
               <p>
                 Hola, en esta serie de guías te ofreceremos el poder adentrarte por los oscuros y tenebrosos lugares de Dark Souls 3, guiandote en
@@ -40,15 +61,19 @@
                 Entendemos lo confuso que pueden llegar a ser algunas zonas y por eso te traemos todo mas explicado que nunca.
               </p>
             </div>
-            <div class="PraiseTheSunLogoImg">
+
+
+            <div class="PraiseTheSunLogoImg"> 
               <img src="./img/imgPraiseTheSunLogo.png" alt="hogueraImgLogo" id="hogueraImgLogoId" />
             </div>
           </div>
         </section>
 
+
         <section class="aboutUs">
           <h2 class="titleAboutUs">Acerca de nosotros</h2>
           <div class="textAboutUs">
+            <!--LISTA, NO DIV-->
             <p>
               Somos un equipo de fanaticos de esta gran saga de videojuegos, en la que decidimos hacer una guia de una de sus obras maestras,
               titulada: Dark souls 3, proveniente del estudio "FromSoftware".
