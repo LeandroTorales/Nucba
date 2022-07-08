@@ -49,6 +49,8 @@ nav ul {
 }
 
 nav ul li {
+  display: grid;
+  justify-items: center;
   margin-left: 25px;
   margin-top: 6px;
   margin-right: 25px;
