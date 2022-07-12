@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.svg-x {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.card-1 {
+  background-color: #ffffff;
+  height: 399px;
+  width: 432px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  text-align: center;
+}
+p {
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#button-input-eso-esta-bien {
+  background-color: #ed6755;
+  font-size: 25px;
+  color: white;
+  border-color: #ed6755;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 19px 29px -10px rgba(237, 103, 85, 0.67);
+  box-shadow: 1px 19px 29px -10px rgba(237, 103, 85, 0.67);
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
