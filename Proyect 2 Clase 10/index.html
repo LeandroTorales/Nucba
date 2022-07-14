@@ -14,13 +14,12 @@
   </head>
   <body>
     <header>
+      <div class="div-fifa-nav-logo">
+        <img src="./assets/img/fifa-nav-logo.png" alt="fifa-nav-logo" class="fifa-nav-logo" />
+      </div>
       <nav>
-        <div class="div-fifa-nav-logo">
-          <img src="./assets/img/fifa-nav-logo.png" alt="fifa-nav-logo" class="fifa-nav-logo" />
-        </div>
-
         <ul>
-          <li><a href="./index.html" class="li-a-navLinks">Inicio </a></li>
+          <li><a href="./index.html" class="li-a-navLinks" id="active">Inicio </a></li>
           <li><a href="./pags/players.html" class="li-a-navLinks">Jugadores </a><i class="fa-solid fa-arrow-down"></i></li>
           <li><a href="./pags/ligues.html" class="li-a-navLinks">Ligas </a><i class="fa-solid fa-arrow-down"></i></li>
           <li><a href="./pags/contact.html" class="li-a-navLinks">Contacto </a></li>
@@ -31,7 +30,8 @@
           <input type="search" placeholder="Barra de búsqueda" id="searchInput" />
           <label for="searchInput" class="label-search-input"><i class="fa-solid fa-magnifying-glass" id="lupaIDBarraBusqueda"></i></label>
         </div>
-        <input type="checkbox" name="checkbox" id="checkbox-input-navbar-mediaquery" />
+
+        <input type="checkbox" id="checkbox-input-navbar-mediaquery" />
         <label for="checkbox-input-navbar-mediaquery" class="label-checkbox-input-mediaquery"
           ><i class="fa-solid fa-bars" id="bars-navbar-mediaquery"></i
         ></label>
@@ -39,7 +39,7 @@
     </header>
     <section class="hero-section">
       <article class="hero-article-content">
-        <h1>Bienvenido</h1>
+        <h1 class="title-hero-h1">Bienvenido</h1>
         <p>Aquí encontraras toda la información de tus equipos favoritos de fifa 22, cartas de jugadores, iconos de jugadores y mucho más.</p>
         <a href="#">Empezar</a>
       </article>
