@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --whiteColor: #ffffff;
+  --blackColor: #000000;
+}
+html {
+  background-color: #dbe4f4;
+}
+/* navbar */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6c7fa1;
+  max-height: 90px;
+}
+.fifa-header-logo {
+  width: auto;
+  height: 7rem;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+.menu {
+  width: 100%;
+}
+.list-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.link-menu {
+  color: var(--blackColor);
+  font-size: 25px;
+  font-weight: bold;
+}
+.bar-search {
+  font-size: 25px;
+}
+#searchInput {
+  font-size: 20px;
+}
+#input-checkbox-hamburguer {
+  display: none;
+}
+.label-checkbox-hamburguer {
+  display: none;
+}
+/* Section hero */
+.hero-section {
+  width: 100%;
+  height: calc(100vh - 90px);
+  background-size: cover;
+  background-position: center;
+  transition: all 2s ease-in-out;
+  animation: heroAnimacionImagenes 20s infinite linear;
+}
+@keyframes heroAnimacionImagenes {
+  0% {
+    background-image: url(../assets/img/fifa-hero-body.jpeg);
+  }
+  50% {
+    background-image: url(../assets/img/fifa-hero-body.jpeg);
+  }
+  51% {
+    background-image: url(../assets/img/fifa-hero-body-2.jpeg);
+  }
+  99% {
+    background-image: url(../assets/img/fifa-hero-body-2.jpeg);
+  }
+  100% {
+    background-image: url(../assets/img/fifa-hero-body.jpeg);
+  }
+}
+.hero-article-content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background-color: rgb(16 17 30 / 57%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title-hero-h1 {
+  font-size: 40px;
+  color: white;
+  text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.82);
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+.hero-article-content p {
+  font-size: 20px;
+  color: white;
+  text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.82);
+  padding-bottom: 15px;
+}
+.hero-article-content a {
+  font-size: 20px;
+  color: white;
+  text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.82);
+  padding: 4px 9px 4px 9px;
+  border-color: 1mm;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+}
+.hero-article-content a:hover {
+  background-color: white;
+  color: black;
+}
