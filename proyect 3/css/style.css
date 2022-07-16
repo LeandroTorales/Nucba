@@ -9,6 +9,7 @@
 :root {
   --whiteColor: #ffffff;
   --blackColor: #000000;
+  --backroundColor: #6c7fa1;
 }
 html {
   background-color: #dbe4f4;
@@ -18,7 +19,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #6c7fa1;
+  background-color: var(--backroundColor);
   max-height: 90px;
 }
 .fifa-header-logo {
@@ -104,6 +105,7 @@ header {
   color: white;
   text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.82);
   padding-bottom: 15px;
+  text-align: center;
 }
 .hero-article-content a {
   font-size: 20px;
@@ -117,4 +119,95 @@ header {
 .hero-article-content a:hover {
   background-color: white;
   color: black;
+}
+/* ===============CARDS ===========*/
+.section-cards {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--backroundColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title-section-cards {
+  text-align: center;
+  padding: 30px 0px;
+  margin: 30px;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+.container-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-players {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-self: normal;
+}
+#player-png-card {
+  max-width: 17rem;
+  height: auto;
+}
+.card-ligues {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#ligue-png-card {
+  max-width: 17rem;
+  height: auto;
+}
+.card-stadiums {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#stadium-png-card {
+  max-width: 17rem;
+  height: auto;
+}
+.h2-cards {
+  margin: 15px 0;
+}
+.text-cards {
+  max-width: 400px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+/* =============Footer============ */
+footer {
+  background-color: aqua;
+  width: 100%;
+}
+footer h2 {
+  text-align: center;
+  padding: 5px 0px;
+  font-size: 17px;
+}
+footer section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.8rem;
+}
+footer section h4{
+    margin-bottom: 5px;
+}
+.fa-location-dot {
+  padding-right: 5px;
+}
+.fa-envelope {
+  padding-right: 5px;
+}
+.fa-phone {
+  padding-right: 5px;
 }
