@@ -55,7 +55,12 @@ header {
 .bar-search-ul {
   font-size: 25px;
 }
+.bar-search-ul li {
+  display: flex;
+  align-items: center;
+}
 #searchInput {
+  margin-right: 10px;
   font-size: 20px;
 }
 #input-checkbox-hamburguer {
@@ -163,11 +168,12 @@ header {
   justify-content: center;
   align-items: baseline;
 }
-.cards {
+.link-cards-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  color: var(--blackColor);
 }
 #player-png-card {
   max-width: 16rem;
@@ -366,8 +372,13 @@ footer p {
   }
 }
 @media (max-width: 580px) {
+  .navbar {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
   .navbar .list-nav {
-    background-color: red;
+    background-color: var(--backroundColor);
     width: 100%;
     height: calc(100vh - 60px);
     position: absolute;
@@ -377,17 +388,20 @@ footer p {
     align-items: center;
     justify-content: space-evenly;
     transform: translateX(100%);
+    transition: all 0.5s;
   }
-  .navbar .label-checkbox-hamburguer {
+  .fa-bars {
     display: block;
   }
-  #input-checkbox-hamburguer {
-    display: block;
-  }
-  #input-checkbox-hamburguer:checked ~ .navbar .list-nav {
+  #input-checkbox-hamburguer:checked ~ .list-nav {
     transform: translateX(0%);
   }
-
+  #searchInput {
+    margin-right: 5px;
+  }
+  .link-menu {
+    font-size: 25px;
+  }
   .title-section-cards {
     font-size: 1.2rem;
     margin: 1rem;
