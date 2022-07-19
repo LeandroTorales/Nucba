@@ -19,8 +19,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   background-color: var(--backroundColor);
-  max-height: 90px;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 .fifa-header-logo {
   width: auto;
@@ -28,22 +32,27 @@ header {
   margin-right: 10px;
   margin-left: 15px;
 }
-.menu {
+.navbar {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .list-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
+  width: 70%;
 }
 .link-menu {
   color: var(--blackColor);
   font-size: 25px;
   font-weight: bold;
 }
-.bar-search {
+.bar-search-ul {
   font-size: 25px;
 }
 #searchInput {
@@ -52,16 +61,16 @@ header {
 #input-checkbox-hamburguer {
   display: none;
 }
-.label-checkbox-hamburguer {
+.fa-bars {
   display: none;
 }
 /* Section hero */
 .hero-section {
+  margin-top: 70px;
   width: 100%;
-  height: calc(100vh - 90px);
+  height: 100vh;
   background-size: cover;
   background-position: center;
-  transition: all 2s ease-in-out;
   animation: heroAnimacionImagenes 20s infinite linear;
 }
 @keyframes heroAnimacionImagenes {
@@ -128,53 +137,62 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
+/* Contenedor que guarda adentro el titulo "explora lo que ofrecemos"y las cards */
+.container-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+/* Titulo cards explora lo que ofrecemos */
 .title-section-cards {
   text-align: center;
-  padding: 30px 0px;
-  margin: 30px;
+  padding: 5px 0px;
   text-transform: uppercase;
-  font-size: 1.7rem;
+  font-size: 2rem;
+  margin: 2rem;
+  text-shadow: -1px 2px 2px rgba(255, 255, 255, 0.82);
 }
+/* Contenedor principal de las cards */
 .container-cards {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
-}
-
-.card-players {
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: baseline;
+}
+.cards {
+  display: flex;
   flex-direction: column;
-  align-self: normal;
+  align-items: center;
+  margin: 0 auto;
 }
 #player-png-card {
-  max-width: 17rem;
-  height: auto;
-}
-.card-ligues {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  max-width: 16rem;
+  margin: 0 auto;
 }
 #ligue-png-card {
-  max-width: 17rem;
-  height: auto;
+  max-width: 16rem;
+  margin: 0 auto;
 }
-.card-stadiums {
+#stadium-png-card {
+  max-width: 16rem;
+  margin: 0 auto;
+}
+/* .card-ligues {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-#stadium-png-card {
-  max-width: 17rem;
-  height: auto;
-}
+} */
+/* .card-stadiums {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} */
 .h2-cards {
   margin: 15px 0;
 }
@@ -185,22 +203,29 @@ header {
 }
 /* =============Footer============ */
 footer {
-  background-color: aqua;
+  background-color: var(--blackColor);
   width: 100%;
+  color: var(--whiteColor);
 }
 footer h2 {
-  text-align: center;
+  text-indent: 2rem;
+  text-align: left;
   padding: 5px 0px;
-  font-size: 17px;
+  font-size: 20px;
 }
 footer section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
 }
-footer section h4{
-    margin-bottom: 5px;
+.container-footer-column1,
+.container-footer-column2 {
+  padding-bottom: 1rem;
+}
+footer section h4 {
+  margin-bottom: 5px;
 }
 .fa-location-dot {
   padding-right: 5px;
@@ -210,4 +235,176 @@ footer section h4{
 }
 .fa-phone {
   padding-right: 5px;
+}
+footer p {
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+/* ================MediaQuerys=============== */
+@media (max-width: 1440px) {
+  .fifa-header-logo {
+    height: 6rem;
+  }
+  .link-menu {
+    font-size: 22px;
+  }
+  #searchInput {
+    font-size: 18px;
+  }
+  .bar-search-ul {
+    font-size: 22px;
+  }
+  .hero-article-content p {
+    font-size: 18px;
+  }
+  .title-hero-h1 {
+    font-size: 38px;
+  }
+  .h2-cards {
+    font-size: 23px;
+  }
+  .text-cards {
+    font-size: 21px;
+  }
+}
+@media (max-width: 1160px) {
+  .fifa-header-logo {
+    height: 5rem;
+  }
+  .link-menu {
+    font-size: 20px;
+  }
+  #searchInput {
+    font-size: 15px;
+  }
+  .bar-search-ul {
+    font-size: 19px;
+  }
+  .hero-article-content p {
+    font-size: 17px;
+  }
+  .title-hero-h1 {
+    font-size: 36px;
+  }
+  .h2-cards {
+    font-size: 21px;
+  }
+  .text-cards {
+    font-size: 20px;
+  }
+  footer h2 {
+    font-size: 19px;
+  }
+}
+@media (max-width: 992px) {
+  header {
+    height: 60px;
+  }
+  .list-nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .link-menu {
+    font-size: 15px;
+  }
+  .bar-search-ul {
+    font-size: 15px;
+  }
+  #searchInput {
+    font-size: 11px;
+  }
+  .hero-section {
+    margin-top: 60px;
+  }
+  .fifa-header-logo {
+    height: 4rem;
+  }
+  .hero-article-content p {
+    font-size: 17px;
+  }
+  .title-hero-h1 {
+    font-size: 36px;
+  }
+  .title-section-cards {
+    margin-top: 30px;
+  }
+  .h2-cards {
+    font-size: 21px;
+  }
+
+  .text-cards {
+    font-size: 20px;
+  }
+  footer h2 {
+    font-size: 19px;
+  }
+}
+@media (max-width: 799px) {
+  .list-nav {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .link-menu {
+    font-size: 14px;
+  }
+  .title-section-cards {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+  #player-png-card {
+    max-width: 11rem;
+  }
+  #ligue-png-card {
+    max-width: 11rem;
+  }
+  #stadium-png-card {
+    max-width: 11rem;
+  }
+  .text-cards {
+    font-size: 17px;
+  }
+}
+@media (max-width: 580px) {
+  .navbar .list-nav {
+    background-color: red;
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+  }
+  .navbar .label-checkbox-hamburguer {
+    display: block;
+  }
+  #input-checkbox-hamburguer {
+    display: block;
+  }
+  #input-checkbox-hamburguer:checked ~ .navbar .list-nav {
+    transform: translateX(0%);
+  }
+
+  .title-section-cards {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+  #player-png-card {
+    max-width: 9rem;
+  }
+  #ligue-png-card {
+    max-width: 9rem;
+  }
+  #stadium-png-card {
+    max-width: 9rem;
+  }
+  .text-cards {
+    font-size: 15px;
+  }
+  footer h2 {
+    text-align: center;
+  }
 }
