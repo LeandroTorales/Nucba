@@ -216,7 +216,7 @@ ul li:hover {
     height: 100vh;
     background: cornflowerblue;
     top: 50px;
-    left: 10%;
+    left: -100%;
     text-align: center;
     transition: all 0.5s;
   }
@@ -227,6 +227,6 @@ ul li:hover {
     font-size: 20px;
   }
   #checkbox-input-navbar-mediaquery:checked ~ nav ul {
-    left: 0;
+    left: 0%;
   }
 }
