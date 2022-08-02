@@ -5,36 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>proyect 3</title>
   </head>
   <body>
     <header>
       <img src="./assets/icons/fifa-nav-logo.png" alt="fifa-header-logo" class="fifa-header-logo" />
-      <nav class="menu">
+      <nav class="navbar">
+        <label for="input-checkbox-hamburguer"><i class="fa-solid fa-bars"></i></label>
+        <input type="checkbox" id="input-checkbox-hamburguer" />
         <ul class="list-nav">
-          <li><a href="./index.html" id="active" class="link-menu">Inicio </a></li>
-          <li><a href="#" class="link-menu">Jugadores</a></li>
-          <li><a href="#" class="link-menu">Ligas</a></li>
-          <li><a href="#" class="link-menu">Contacto</a></li>
-          <li><a href="#" class="link-menu">Sobre nosotros</a></li>
-          <ul>
-            <li class="bar-search">
-              <input type="search" placeholder="Barra de búsqueda" id="searchInput" />
-              <label for="searchInput" class="label-search-nav"><i class="fa-solid fa-magnifying-glass"></i></label>
-            </li>
-          </ul>
-          <input type="checkbox" id="input-checkbox-hamburguer" />
-          <label for="input-checkbox-hamburguer" class="label-checkbox-hamburguer"><i class="fa-solid fa-bars"></i></label>
+          <li class="animate__animated animate__heartBeat"><a href="./index.html" id="active" class="link-menu">Inicio </a></li>
+          <li class="animate__animated animate__heartBeat"><a href="./pags/players.html" class="link-menu">Jugadores</a></li>
+          <li class="animate__animated animate__heartBeat"><a href="./pags/ligues.html" class="link-menu">Ligas</a></li>
+          <li class="animate__animated animate__heartBeat"><a href="#" class="link-menu">Contacto</a></li>
+          <li class="animate__animated animate__heartBeat"><a href="#" class="link-menu">Sobre nosotros</a></li>
+        </ul>
+        <ul class="bar-search-ul">
+          <li>
+            <input type="search" placeholder="Barra de búsqueda" id="searchInput" />
+            <label for="searchInput" class="label-search-nav"><i class="fa-solid fa-magnifying-glass"></i></label>
+          </li>
         </ul>
       </nav>
     </header>
-    <section class="hero-section">
-      <article class="hero-article-content">
-        <h1 class="title-hero-h1">Bienvenido</h1>
-        <p>Aquí encontraras toda la información de tus equipos favoritos de fifa 22, cartas de jugadores, iconos de jugadores y mucho más.</p>
-        <a href="#">Empezar</a>
-      </article>
-    </section>
+    <main>
+      <section class="hero-section">
+        <article class="hero-article-content">
+          <h1 class="title-hero-h1">Bienvenido</h1>
+          <p>Aquí encontraras toda la información de tus equipos favoritos de fifa 22, cartas de jugadores, iconos de jugadores y mucho más.</p>
+          <a href="#section-cards" class="animate__animated animate__pulse">Empezar</a>
+        </article>
+      </section>
+      <section class="section-cards" id="section-cards">
+        <div class="container-card-title">
+          <h2 class="title-section-cards">Explora lo que ofrecemos</h2>
+          <div class="container-cards">
+            <article class="animate__animated animate__fadeIn">
+              <a href="./pags/players.html" class="link-cards-hero">
+                <img src="./assets/icons/player-png-card.png" alt="player-png-card" id="player-png-card" class="animate__fadeIn" />
+                <h2 class="h2-cards">Jugadores</h2>
+                <p class="text-cards">Aprieta aquí y podras revisar nuestra coleccion de jugadores disponibles.</p></a
+              >
+            </article>
+            <article class="animate__animated animate__fadeIn">
+              <a href="./pags/ligues.html" class="link-cards-hero">
+                <img src="./assets/icons/ligue-png-card.png" alt="ligue-png-card" id="ligue-png-card" />
+                <h2 class="h2-cards">Ligas</h2>
+                <p class="text-cards">Visita las ligas mas competitivas actualmente.</p>
+              </a>
+            </article>
+            <article class="animate__animated animate__fadeIn">
+              <a href="./pags/stadiums.html" class="link-cards-hero">
+                <img src="./assets/icons/stadium-png-card.png" alt="stadium-png-card" id="stadium-png-card" class="animate__fadeIn" />
+                <h2 class="h2-cards">Estadios</h2>
+                <p class="text-cards">Revisa los estadios mas icónicos del deporte mas famoso del mundo.</p></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h2>Contacto</h2>
+      <section>
+        <div class="container-footer-column1">
+          <h4>Argentina, Uruguay</h4>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i>Calle falsa 1234</li>
+            <li><i class="fa-solid fa-envelope"></i>leandrotorales1234@gmail.com</li>
+            <li><i class="fa-solid fa-phone"></i>123123123123</li>
+          </ul>
+        </div>
+        <div class="container-footer-column2">
+          <h4>Estados Unidos, Canadá</h4>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i>Calle falsa 1234</li>
+            <li><i class="fa-solid fa-envelope"></i>leandrotorales1234@gmail.com</li>
+            <li><i class="fa-solid fa-phone"></i>123123123123</li>
+          </ul>
+        </div>
+      </section>
+      <p>All rights deserved. Nucba copyright ©.</p>
+    </footer>
   </body>
 </html>

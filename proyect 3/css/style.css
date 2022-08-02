@@ -2,24 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   list-style: none;
   text-decoration: none;
 }
 :root {
   --whiteColor: #ffffff;
   --blackColor: #000000;
+  --backroundColor: #6c7fa1;
 }
 html {
   background-color: #dbe4f4;
+  scroll-behavior: smooth;
 }
 /* navbar */
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #6c7fa1;
-  max-height: 90px;
+  width: 100%;
+  background-color: var(--backroundColor);
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 .fifa-header-logo {
   width: auto;
@@ -27,42 +33,82 @@ header {
   margin-right: 10px;
   margin-left: 15px;
 }
-.menu {
+/* Empieza navbar */
+.navbar {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+/* lista navbar links estructuracion */
 .list-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
+  width: 70%;
 }
+/* empieza estilos links navbar */
 .link-menu {
   color: var(--blackColor);
   font-size: 25px;
   font-weight: bold;
+  border-radius: 6px;
+  background-color: rgb(255 255 255 / 68%);
 }
-.bar-search {
+.link-menu:hover {
+  background-color: var(--blackColor);
+  color: rgb(255 255 255 / 68%);
+}
+/*Termina Estilizacion links navbar */
+/* Animacion links navbar */
+.animate__heartBeat {
+  animation-duration: 0s;
+}
+.animate__heartBeat:hover {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.74, 0.05, 0.53, 0.53);
+  animation-direction: alternate;
+}
+/* Fin de animacion links navbar */
+
+/* Barra de busqueda lista */
+.bar-search-ul {
   font-size: 25px;
 }
+.bar-search-ul li {
+  display: flex;
+  align-items: center;
+}
 #searchInput {
+  margin-right: 10px;
   font-size: 20px;
 }
+/* Icon barra de busqueda */
+.label-search-nav {
+  cursor: pointer;
+}
+
+/* Inputs hamburguesa icons */
 #input-checkbox-hamburguer {
   display: none;
 }
-.label-checkbox-hamburguer {
+.fa-bars {
   display: none;
 }
-/* Section hero */
+
+/* Empieza Section hero */
 .hero-section {
+  margin-top: 70px;
   width: 100%;
-  height: calc(100vh - 90px);
+  height: 100vh;
   background-size: cover;
   background-position: center;
-  transition: all 2s ease-in-out;
   animation: heroAnimacionImagenes 20s infinite linear;
 }
+/* Empieza secuencia de fotogramas de animaciones */
 @keyframes heroAnimacionImagenes {
   0% {
     background-image: url(../assets/img/fifa-hero-body.jpeg);
@@ -80,18 +126,20 @@ header {
     background-image: url(../assets/img/fifa-hero-body.jpeg);
   }
 }
+/* Contenido del hero estructuracion */
 .hero-article-content {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   color: black;
-  background-color: rgb(16 17 30 / 57%);
+  background-color: rgba(16, 17, 30, 0.569);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+/* titulo hero "bienvenidos" */
 .title-hero-h1 {
   font-size: 40px;
   color: white;
@@ -99,12 +147,17 @@ header {
   padding-bottom: 1rem;
   font-weight: 600;
 }
+/* Texto hero */
 .hero-article-content p {
   font-size: 20px;
   color: white;
   text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.82);
   padding-bottom: 15px;
+  text-align: center;
+  margin-right: 15px;
+  margin-left: 15px;
 }
+/* Link "empezar" hero */
 .hero-article-content a {
   font-size: 20px;
   color: white;
@@ -113,8 +166,310 @@ header {
   border-color: 1mm;
   border-style: solid;
   border-width: 2px 2px 2px 2px;
+  animation-duration: 0s;
 }
+/* Animacion hero button "empezar" */
 .hero-article-content a:hover {
   background-color: white;
   color: black;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+/* ===============CARDS ===========*/
+.section-cards {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--backroundColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Contenedor que guarda adentro el titulo "explora lo que ofrecemos"y las cards estructuracion*/
+.container-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+/* Titulo cards explora lo que ofrecemos */
+.title-section-cards {
+  text-align: center;
+  padding: 5px 0px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 2rem;
+  text-shadow: -1px 2px 2px rgba(255, 255, 255, 0.82);
+}
+/* Contenedor principal de las cards */
+.container-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+.link-cards-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  color: var(--blackColor);
+}
+/* Animacion cards */
+.animate__fadeIn {
+  animation-duration: 0s;
+}
+.animate__fadeIn:hover {
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  animation-direction: alternate;
+}
+/* Tamaño de imagenes de cards */
+#player-png-card {
+  max-width: 16rem;
+  margin: 0 auto;
+}
+#ligue-png-card {
+  max-width: 16rem;
+  margin: 0 auto;
+}
+#stadium-png-card {
+  max-width: 16rem;
+  margin: 0 auto;
+}
+/* titulos de cards */
+.h2-cards {
+  margin: 15px 0;
+}
+/* texto de cards */
+.text-cards {
+  max-width: 400px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+/* =============Footer============ */
+/* Footer estructuracion */
+footer {
+  background-color: var(--blackColor);
+  width: 100%;
+  color: var(--whiteColor);
+}
+/* Footer titulo  */
+footer h2 {
+  text-indent: 2rem;
+  text-align: left;
+  padding: 5px 0px;
+  font-size: 20px;
+}
+/* Footer Section para estructurar datos de contacto */
+footer section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+/* Columnas 1 y 2 de datos de contacto */
+.container-footer-column1,
+.container-footer-column2 {
+  padding-bottom: 1rem;
+}
+footer section h4 {
+  margin-bottom: 5px;
+}
+/* Icons footer */
+.fa-location-dot {
+  padding-right: 5px;
+}
+.fa-envelope {
+  padding-right: 5px;
+}
+.fa-phone {
+  padding-right: 5px;
+}
+/* terminan Icons footer */
+/* Footer texto */
+footer p {
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+/* ================MediaQuerys=============== */
+@media (max-width: 1440px) {
+  .fifa-header-logo {
+    height: 6rem;
+  }
+  .link-menu {
+    font-size: 22px;
+  }
+  #searchInput {
+    font-size: 18px;
+  }
+  .bar-search-ul {
+    font-size: 22px;
+  }
+  .hero-article-content p {
+    font-size: 18px;
+  }
+  .title-hero-h1 {
+    font-size: 38px;
+  }
+  .h2-cards {
+    font-size: 23px;
+  }
+  .text-cards {
+    font-size: 21px;
+  }
+}
+@media (max-width: 1160px) {
+  .fifa-header-logo {
+    height: 5rem;
+  }
+  .link-menu {
+    font-size: 20px;
+  }
+  #searchInput {
+    font-size: 15px;
+  }
+  .bar-search-ul {
+    font-size: 19px;
+  }
+  .hero-article-content p {
+    font-size: 17px;
+  }
+  .title-hero-h1 {
+    font-size: 36px;
+  }
+  .h2-cards {
+    font-size: 21px;
+  }
+  .text-cards {
+    font-size: 20px;
+  }
+  footer h2 {
+    font-size: 19px;
+  }
+}
+@media (max-width: 992px) {
+  header {
+    height: 60px;
+  }
+  .list-nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .link-menu {
+    font-size: 15px;
+  }
+  .bar-search-ul {
+    font-size: 15px;
+  }
+  #searchInput {
+    font-size: 11px;
+  }
+  .hero-section {
+    margin-top: 60px;
+  }
+  .fifa-header-logo {
+    height: 4rem;
+  }
+  .hero-article-content p {
+    font-size: 17px;
+  }
+  .title-hero-h1 {
+    font-size: 36px;
+  }
+  .title-section-cards {
+    margin-top: 30px;
+  }
+  .h2-cards {
+    font-size: 21px;
+  }
+
+  .text-cards {
+    font-size: 20px;
+  }
+  footer h2 {
+    font-size: 19px;
+  }
+}
+@media (max-width: 799px) {
+  .list-nav {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .link-menu {
+    font-size: 14px;
+  }
+  .title-section-cards {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+  #player-png-card {
+    max-width: 11rem;
+  }
+  #ligue-png-card {
+    max-width: 11rem;
+  }
+  #stadium-png-card {
+    max-width: 11rem;
+  }
+  .text-cards {
+    font-size: 17px;
+  }
+}
+@media (max-width: 580px) {
+  .navbar {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .navbar .list-nav {
+    background-color: var(--backroundColor);
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+    transition: all 0.5s;
+  }
+  .fa-bars {
+    display: block;
+  }
+  #input-checkbox-hamburguer:checked ~ .list-nav {
+    transform: translateX(0%);
+  }
+  #searchInput {
+    margin-right: 5px;
+  }
+  .link-menu {
+    font-size: 35px;
+  }
+  .title-section-cards {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+  #player-png-card {
+    max-width: 9rem;
+  }
+  #ligue-png-card {
+    max-width: 9rem;
+  }
+  #stadium-png-card {
+    max-width: 9rem;
+  }
+  .text-cards {
+    font-size: 15px;
+  }
+  footer h2 {
+    text-align: center;
+  }
 }
