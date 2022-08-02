@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   list-style: none;
   text-decoration: none;
 }
@@ -13,6 +13,7 @@
 }
 html {
   background-color: #dbe4f4;
+  scroll-behavior: smooth;
 }
 /* navbar */
 header {
@@ -32,13 +33,14 @@ header {
   margin-right: 10px;
   margin-left: 15px;
 }
+/* Empieza navbar */
 .navbar {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/* lista navbar links estructuracion */
 .list-nav {
   display: flex;
   justify-content: space-between;
@@ -47,11 +49,32 @@ header {
   padding-right: 2rem;
   width: 70%;
 }
+/* empieza estilos links navbar */
 .link-menu {
   color: var(--blackColor);
   font-size: 25px;
   font-weight: bold;
+  border-radius: 6px;
+  background-color: rgb(255 255 255 / 68%);
 }
+.link-menu:hover {
+  background-color: var(--blackColor);
+  color: rgb(255 255 255 / 68%);
+}
+/*Termina Estilizacion links navbar */
+/* Animacion links navbar */
+.animate__heartBeat {
+  animation-duration: 0s;
+}
+.animate__heartBeat:hover {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.74, 0.05, 0.53, 0.53);
+  animation-direction: alternate;
+}
+/* Fin de animacion links navbar */
+
+/* Barra de busqueda lista */
 .bar-search-ul {
   font-size: 25px;
 }
@@ -63,13 +86,20 @@ header {
   margin-right: 10px;
   font-size: 20px;
 }
+/* Icon barra de busqueda */
+.label-search-nav {
+  cursor: pointer;
+}
+
+/* Inputs hamburguesa icons */
 #input-checkbox-hamburguer {
   display: none;
 }
 .fa-bars {
   display: none;
 }
-/* Section hero */
+
+/* Empieza Section hero */
 .hero-section {
   margin-top: 70px;
   width: 100%;
@@ -78,6 +108,7 @@ header {
   background-position: center;
   animation: heroAnimacionImagenes 20s infinite linear;
 }
+/* Empieza secuencia de fotogramas de animaciones */
 @keyframes heroAnimacionImagenes {
   0% {
     background-image: url(../assets/img/fifa-hero-body.jpeg);
@@ -95,18 +126,20 @@ header {
     background-image: url(../assets/img/fifa-hero-body.jpeg);
   }
 }
+/* Contenido del hero estructuracion */
 .hero-article-content {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   color: black;
-  background-color: rgb(16 17 30 / 57%);
+  background-color: rgba(16, 17, 30, 0.569);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+/* titulo hero "bienvenidos" */
 .title-hero-h1 {
   font-size: 40px;
   color: white;
@@ -114,6 +147,7 @@ header {
   padding-bottom: 1rem;
   font-weight: 600;
 }
+/* Texto hero */
 .hero-article-content p {
   font-size: 20px;
   color: white;
@@ -123,6 +157,7 @@ header {
   margin-right: 15px;
   margin-left: 15px;
 }
+/* Link "empezar" hero */
 .hero-article-content a {
   font-size: 20px;
   color: white;
@@ -131,11 +166,17 @@ header {
   border-color: 1mm;
   border-style: solid;
   border-width: 2px 2px 2px 2px;
+  animation-duration: 0s;
 }
+/* Animacion hero button "empezar" */
 .hero-article-content a:hover {
   background-color: white;
   color: black;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
 }
+
 /* ===============CARDS ===========*/
 .section-cards {
   width: 100%;
@@ -145,7 +186,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-/* Contenedor que guarda adentro el titulo "explora lo que ofrecemos"y las cards */
+/* Contenedor que guarda adentro el titulo "explora lo que ofrecemos"y las cards estructuracion*/
 .container-card-title {
   display: flex;
   align-items: center;
@@ -177,6 +218,17 @@ header {
   margin: 0 auto;
   color: var(--blackColor);
 }
+/* Animacion cards */
+.animate__fadeIn {
+  animation-duration: 0s;
+}
+.animate__fadeIn:hover {
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  animation-direction: alternate;
+}
+/* Tamaño de imagenes de cards */
 #player-png-card {
   max-width: 16rem;
   margin: 0 auto;
@@ -189,38 +241,31 @@ header {
   max-width: 16rem;
   margin: 0 auto;
 }
-/* .card-ligues {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-} */
-/* .card-stadiums {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-} */
+/* titulos de cards */
 .h2-cards {
   margin: 15px 0;
 }
+/* texto de cards */
 .text-cards {
   max-width: 400px;
   text-align: center;
   font-size: 1.4rem;
 }
 /* =============Footer============ */
+/* Footer estructuracion */
 footer {
   background-color: var(--blackColor);
   width: 100%;
   color: var(--whiteColor);
 }
+/* Footer titulo  */
 footer h2 {
   text-indent: 2rem;
   text-align: left;
   padding: 5px 0px;
   font-size: 20px;
 }
+/* Footer Section para estructurar datos de contacto */
 footer section {
   display: flex;
   justify-content: space-evenly;
@@ -228,6 +273,7 @@ footer section {
   font-size: 1rem;
   flex-wrap: wrap;
 }
+/* Columnas 1 y 2 de datos de contacto */
 .container-footer-column1,
 .container-footer-column2 {
   padding-bottom: 1rem;
@@ -235,6 +281,7 @@ footer section {
 footer section h4 {
   margin-bottom: 5px;
 }
+/* Icons footer */
 .fa-location-dot {
   padding-right: 5px;
 }
@@ -244,6 +291,8 @@ footer section h4 {
 .fa-phone {
   padding-right: 5px;
 }
+/* terminan Icons footer */
+/* Footer texto */
 footer p {
   font-size: 12px;
   text-align: center;
@@ -402,7 +451,7 @@ footer p {
     margin-right: 5px;
   }
   .link-menu {
-    font-size: 25px;
+    font-size: 35px;
   }
   .title-section-cards {
     font-size: 1.2rem;
